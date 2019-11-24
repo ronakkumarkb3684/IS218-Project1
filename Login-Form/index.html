@@ -3,27 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome</title>
-    <style>
-        .error {color: #FF0000;}
-    </style>
+    <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 <body>
     <main>
-        <h1>Login Form</h1>
-        <p><span class="error">* required field</span></p>
-        <form action="login.php" method="post">
-            <div>
-                <label for="email">Email:</label>
-                <input type="email" name="email" id="email" ><span class="error">* <?php echo $emailErr;?></span><br><br>
+        <div class="loginForm">
+            <img src="images/avatar.png" class="avatar">
+            <h1>Login Form</h1>
 
-                <label for="password">Password:</label>
-                <input type="password" name="password" id="password"><span class="error">*<?php echo $passwordErr;?></span><br>
-            </div>
-            <br>
-            <input type="submit" value="Login">
-            <p>Not Registered?, click below to register</p>
-            <p><a href="../Registration-Form/index.html">Register</a></p>
-        </form>
+            <form action="login.php" method="post">
+                <div>
+                    <label for="email">Email: *</label>
+                    <input type="email" name="email" id="email" ><span class="error"><?php echo $emailErr;?></span><br><br>
+
+                    <label for="password">Password: *</label>
+                    <input type="password" name="password" id="password"><span class="error"><?php echo $passwordErr;?></span><br>
+                    <p><span class="error">* required field</span></p>
+                </div>
+                <br>
+                <input type="submit" value="Login">
+                <p>Not Registered?, click below to create account</p><br>
+                <p><a href="../Registration-Form/index.html">Register</a></p>
+            </form>
+        </div>
     </main>
 </body>
 </html>
