@@ -8,6 +8,21 @@ body{
     height: 100vh;
     width: auto;
 }
+/*table {
+    border-collapse: collapse;
+    width: auto;
+}*/
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 35px;
+}
 /*.formHeading {
     color: #8bf0ba;
     font-family: "Bookman Old Style", "Arial", "Times New Roman", sans-serif;
