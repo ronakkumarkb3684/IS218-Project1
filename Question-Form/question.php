@@ -1,18 +1,17 @@
 <?php
 
-//session_start();
-//$aEmail = $_SESSION['email'];
-
 require("../pdo.php");
+require("../functions.php");
 
-//session_start();
 
-//$email = $_SESSION['email'];
 //Get values from the input
-$userId = filter_input(INPUT_GET, 'userId');
+//$userId = filter_input(INPUT_GET, 'userId');
 $QuestionName = filter_input(INPUT_POST, 'Question-name');
 $QuestionBody = filter_input(INPUT_POST, 'Question-body');
 $QuestionSkills = filter_input(INPUT_POST, 'Question-skills');
+
+session_start();
+$userId = $_SESSION['userId'];
 
 
 $CheckSkills = explode(',', $QuestionSkills);
@@ -59,8 +58,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Execute the SQL Query
         $statement->execute();
+
         // Close the database
         $statement->closeCursor();
+
 
         header("Location: ../Question-List/question-list.php?userId=$userId");
     }
