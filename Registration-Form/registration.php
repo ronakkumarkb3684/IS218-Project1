@@ -62,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Close the database
         $statement->closeCursor();
 
-        header('Location: ../Question-List/index.html');
+        header('Location: ../Login-Form/index.html');
     }
 }
 ?>
